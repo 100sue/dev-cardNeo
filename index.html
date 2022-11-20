@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ui/UX: My portfolio</title>
+</head>
+<body>
+    <div class="bg-circles">
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
+        <div class="circle-3"></div>
+        <div class="circle-4"></div>
+        <div class="circle-5"></div>
+      </div>
+    <div class="container">
+        <div class="card">
+            <div class="content">
+                <h2>01</h2>
+                <h3>Portfolio Classic</h3>
+                <p>Portfolio Tendance 2022.<br>
+                    Technologies used : HTML - CSS - JS
+                </p>
+                <a href="https://100sue.github.io/portfolio-v4/">Read More</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <h2>02</h2>
+                <h3>Portfolio Glass</h3>
+                <p>Portfolio glassmorphism.<br>
+                Technologies used : HTML - CSS - JS
+                </p>
+                <a href="https://100sue.github.io/portfolio-glass/">Read More</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <h2>03</h2>
+                <h3>Portfolio Neuro</h3>
+                <p>Portfolio Neuromorphism.<br>
+                    Technologies used : HTML - CSS - JS
+                </p>
+                <a href="https://100sue.github.io/portfolio-neuro/">Read More</a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".card"), {
+		max: 25,
+		speed: 400,
+        glare: true,
+        "max-glare": 1,
+	});
+	
+    </script>
+</body>
+</html>
