@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
     margin: 0;
@@ -118,15 +119,62 @@ body::before {
         transform: translateY(0px);
     }
 }
+
+/* ------------ Scroll bar : new design ------------ */
+::-webkit-scrollbar {
+    width: 20px;
+    background: linear-gradient(to bottom right,  #359cf0, #aef1ee);
+}
+::-webkit-scrollbar-thumb {
+    
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+::-webkit-scrollbar-track {
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3586ff;
+}
+
+/* ------ adapted for firefox ------ */
+
+@supports (scrollbar-color: red blue) {
+    * {
+        scrollbar-color: #359cf0 #aef1ee;
+        scrollbar-width: thin;
+    }
+
+}
+
+
 .wrapper{
     z-index: 1;
+    display: block;
 }
-.wrapper h2{
-    color: white;
-    font-size: 1.8rem;
-    margin-left: 240px;
-    
+.wrapper h4{
+    color:#8EDAED ;
+    font-size: 3em;
+    text-align: center;
+    -webkit-text-stroke: 1px #3586ff;
 }
+.wrapper h5 {
+    color: #fff;
+    font-family: Dancing script, sans-serif;
+    text-align: center;
+    font-size: 1.9em;
+    margin-top: 10px;
+}
+.wrapper p {
+    text-align: center;
+    margin-top: 10px;
+}
+
 .container {
     position: relative;
     display: flex;
@@ -177,13 +225,15 @@ body::before {
 .container .card .content h3 {
     font-size: 1.8em;
     color: #ffff;
+    -webkit-text-stroke: 1px #3586ff;
     z-index: 1;
 }
 
 .container .card .content p {
     font-size: 0.9em;
     color: #1c11c0;
-    font-weight: 300;
+    font-weight: 600;
+    margin-top: 10px;
 
 }
 
@@ -191,20 +241,25 @@ body::before {
     position: relative;
     display: inline-block;
     padding: 8px 20px;
-    margin-top: 15px;
+    margin-top: 28px;
     background: #ffff;
     color: #000;
     border-radius: 20px;
     text-decoration: none;
     font-weight: 500;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-
-
+    
 }
+.container .card .content a:hover{
+    background-color: #1c11c0;
+    color: #fff;
+}
+
 .social {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
 }
 .social ul {
     position: relative;
@@ -219,8 +274,9 @@ body::before {
 }
 .social ul li a {
     position: relative;
-    width: 60px;
-    height: 60px;
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
     border-radius: 50%;
     display: flex;
     justify-content: center;
